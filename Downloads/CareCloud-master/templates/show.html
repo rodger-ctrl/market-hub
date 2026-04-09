@@ -1,0 +1,42 @@
+{% extends 'starter-page.html' %}
+
+{% load static %}
+
+{% block content %}
+<h1 class="text-center fw-4">All Appointments</h1>
+
+<table class="table container table-dark ">
+
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Date & Time</th>
+        <th>Department</th>
+        <th>Doctor</th>
+        <th>Message</th>
+        <th>Actions</th>
+    </tr>
+
+        {% for appointment in allappointments %}
+        <tr>
+            <td>{{appointment.Name}}</td>
+            <td>{{appointment.email}}</td>
+            <td>{{appointment.Phone}}</td>
+            <td>{{appointment.datetime}}</td>
+            <td>{{appointment.Department}}</td>
+            <td>{{appointment.Doctor}}</td>
+            <td>{{appointment.Message}}</td>
+            <td>
+                <a href="/edit/{{appointment.id}}" class="btn btn-primary rounded-4">Edit</a>
+                <a href="/delete/{{appointment.id}}" class="btn btn-danger rounded-4 ms-3">Delete</a>
+                <a href="{% url 'pay' %}" class="btn btn-success rounded-4 ms-3">Pay by Mpesa</a>
+            </td>
+        </tr>
+        {% endfor %}
+
+
+
+
+</table>
+{% endblock %}
