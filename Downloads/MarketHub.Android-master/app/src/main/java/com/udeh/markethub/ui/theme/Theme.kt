@@ -10,15 +10,11 @@ import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
-import com.Rodger.markethub.ui.theme.Pink40
-import com.Rodger.markethub.ui.theme.Purple40
-import com.Rodger.markethub.ui.theme.PurpleGrey40
-import com.Rodger.markethub.ui.theme.PurpleGrey80
 
 private val DarkColorScheme = darkColorScheme(
-    primary = Purple40,
+    primary = Purple80,
     secondary = PurpleGrey80,
-    tertiary = Pink40
+    tertiary = Pink80
 )
 
 private val LightColorScheme = lightColorScheme(

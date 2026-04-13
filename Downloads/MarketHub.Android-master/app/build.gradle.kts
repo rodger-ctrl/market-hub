@@ -1,5 +1,3 @@
-import org.gradle.kotlin.dsl.invoke
-
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
@@ -58,7 +56,9 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
 
-//Navigation
+
+    //Navigation
     implementation("androidx.navigation:navigation-runtime-ktx:2.9.7")
     implementation("androidx.navigation:navigation-compose:2.9.7")
+
 }
